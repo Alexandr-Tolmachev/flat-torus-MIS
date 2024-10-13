@@ -82,7 +82,7 @@ The basic example (with defaults settings) run this methods over the local maxim
   ```python solve_torus_dataset.py solve kamis  data/input/kamis  data/output/kamis --time_limit 100 --results_filename example_results.json```
 
 - Intel-TreeSearch
-  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/intel-final-model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
+  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/intel-final-model/model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
 
 - Learning What to Differ
   ```python solve_torus_dataset.py --self_loops solve lwd data/input/lwd  data/output/lwd --time_limit 100 --pretrained_weights pretrained_models/lwd-final-model --maximum_iterations_per_episode 100 --results_filename example_results.json```
