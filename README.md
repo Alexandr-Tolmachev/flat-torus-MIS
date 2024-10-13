@@ -44,7 +44,7 @@ In `solvers`, you can find the wrappers for the currently supported solvers. In 
 
 For using this suite, `conda` is required. You can the `setup_bm_env.sh` script which will setup the conda environment with all required dependencies. The file `main.py` is the main interface you will call for data generation, solving, and training from the [MIS-benchmark](https://github.com/MaxiBoether/mis-benchmark-framework/blob/master/main.py) that we used. You can find out more about the usage using `python main.py -h`. 
 
-The folder `pretrained_models` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). This folder is empty, but before you starting experiments, the weights of pretrained models should be downloaded and unzipped to this folder from [pretrained weights link](https://mboether.com/paper-models-randomgraphs.zip).
+The archive `pretrained_models.zip` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). Before you starting experiments, you should unzip extract these files to the `pretrained_models` folder.
 
 File `utils.py` сontains necessary functions from the original MWIS-Benchmark.
 
@@ -57,7 +57,7 @@ The folder `data` contains the experiment results (json files, MIS images on the
 
 ## Installation
 
-Firstly, you must install `conda` and clone this repository. Next, you can run `setup_bm_env.sh` script or run two commands manually:
+Firstly, you must install `conda` and clone this repository and unzip `pretrained_models.zip` archive to `pretrained_models` folder. Next, you can run `setup_bm_env.sh` script or run two commands manually:
 - `conda env create -f environment.yml` (create the environment via `environment.yml` file from this repository)
 -  `conda activate mwis-benchmark` (activate the created environment)
 
@@ -65,6 +65,7 @@ Firstly, you must install `conda` and clone this repository. Next, you can run `
 ```bash
 git clone https://github.com/Alexandr-Tolmachev/flat-torus-MIS.git
 cd flat-torus-MIS
+unzip pretrained_models.zip
 ./setup_bm_env.sh
 ```
 
