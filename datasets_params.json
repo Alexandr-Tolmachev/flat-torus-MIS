@@ -1,0 +1,5 @@
+{"dataset-1": {"l1_range": [2, 6], "l1_step": 0.2, "l2_range": [2, 6], "l2_step": 0.2, "alpha_range": [20, 90], "alpha_step": 5}, 
+ "dataset-2": {"l1_range": [3.2, 3.6], "l1_step": 0.02, "l2_range": [3.2, 3.6], "l2_step": 0.02, "alpha_range": [55, 65], "alpha_step": 2.5}, 
+ "dataset-3": {"l1_range": [3.32, 3.36], "l1_step": 0.004, "l2_range": [3.32, 3.36], "l2_step": 0.004, "alpha_range": [57.5, 62.5], "alpha_step": 0.5}, 
+ "dataset-4": {"l1_range": [3.328, 3.34], "l1_step": 0.001, "l2_range": [3.328, 3.34], "l2_step": 0.001, "alpha_range": [59.5, 60.5], "alpha_step": 0.25},
+ "test_dataset": {"l1_range": [3, 4], "l1_step": 1, "l2_range": [3, 4], "l2_step": 1, "alpha_range": [60, 90], "alpha_step": 30}}
