@@ -44,7 +44,9 @@ In `solvers`, you can find the wrappers for the currently supported solvers. In 
 
 For using this suite, `conda` is required. You can the `setup_bm_env.sh` script which will setup the conda environment with all required dependencies. The file `main.py` is the main interface you will call for data generation, solving, and training from the [MIS-benchmark](https://github.com/MaxiBoether/mis-benchmark-framework/blob/master/main.py) that we used. You can find out more about the usage using `python main.py -h`. 
 
-The folder `pretrained_models` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). File `utils.py` сontains necessary functions from the original MWIS-Benchmark.
+The folder `pretrained_models` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). This folder is empty, but before you starting experiments, the weights of pretrained models should be downloaded to this folder from this [link](...).
+
+File `utils.py` сontains necessary functions from the original MWIS-Benchmark.
 
 The folder `torus_graph_utils` contains several scripts for constructing graphs based on the flat toruses and for the creation of datasets with graphs parameters that will be used in our experiments.
 
