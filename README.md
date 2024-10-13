@@ -76,13 +76,13 @@ We will use the `solve_torus_dataset.py` script to run experiments. The argument
 The basic example (with defaults settings) run this methods over the local maximum graph $T_{l_1, l_2, \alpha}$ found in our paper ($l_1 = l_2 = 3.331, \alpha = 60^\circ$) with grid size $N = M = 100$ (basic grid size for our experiments).
 
 - DGL-TreeSearch
-  ```python solve_torus_dataset.py --self_loops solve dgl-treesearch data/input/dgl data/output/dgl --time_limit 100 --pretrained_weights pretrained_models/intel-final-model/1630454124_final_model32.torch --max_prob_maps 16 --num_threads 1 --reduction --local_search --queue_pruning --weighted_queue_pop --cuda_devices 0 --results_filename example_results.json```
+  ```python solve_torus_dataset.py --self_loops solve dgl-treesearch data/input/dgl data/output/dgl --time_limit 100 --pretrained_weights pretrained_models/dgl-final-model/1630454124_final_model32.torch --max_prob_maps 16 --num_threads 1 --reduction --local_search --queue_pruning --weighted_queue_pop --cuda_devices 0 --results_filename example_results.json```
   
 - KaMIS
   ```python solve_torus_dataset.py solve kamis  data/input/kamis  data/output/kamis --time_limit 100 --results_filename example_results.json```
 
 - Intel-TreeSearch
-  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/dgl-final-model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
+  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/intel-final-model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
 
 - Learning What to Differ
   ```python solve_torus_dataset.py --self_loops solve lwd data/input/lwd  data/output/lwd --time_limit 100 --pretrained_weights pretrained_models/lwd-final-model --maximum_iterations_per_episode 100 --results_filename example_results.json```
