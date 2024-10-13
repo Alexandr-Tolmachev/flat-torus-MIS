@@ -57,7 +57,11 @@ The archieve `data.zip` contains the folder `data` contains the experiment resul
 
 ## Installation
 
-Firstly, you must install `conda` and clone this repository, unzip `pretrained_models.zip` archive to `pretrained_models` folder and unzip `data.zip` to `data` folder inside this repository. Next, you can run `setup_bm_env.sh` script or run two commands manually:
+Firstly, you must install `conda` and clone this repository, unzip `pretrained_models.zip` archive to `pretrained_models` folder and unzip `data.zip` to `data` folder inside this repository. 
+
+These archieves (`data.zip` and `pretrained_models.zip`) can be downloaded via this link (will be written here later).
+
+Next, you can run `setup_bm_env.sh` script or run two commands manually:
 - `conda env create -f environment.yml` (create the environment via `environment.yml` file from this repository)
 -  `conda activate mwis-benchmark` (activate the created environment)
 
