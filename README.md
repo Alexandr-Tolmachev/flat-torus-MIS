@@ -44,7 +44,7 @@ In `solvers`, you can find the wrappers for the currently supported solvers. In 
 
 For using this suite, `conda` is required. You can the `setup_bm_env.sh` script which will setup the conda environment with all required dependencies. The file `main.py` is the main interface you will call for data generation, solving, and training from the [MIS-benchmark](https://github.com/MaxiBoether/mis-benchmark-framework/blob/master/main.py) that we used. You can find out more about the usage using `python main.py -h`. 
 
-The folder `pretrained_models` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). This folder is empty, but before you starting experiments, the weights of pretrained models should be downloaded to this folder from this [link](...).
+The folder `pretrained_models` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). This folder is empty, but before you starting experiments, the weights of pretrained models should be downloaded and unzipped to this folder from [pretrained weights link](https://mboether.com/paper-models-randomgraphs.zip).
 
 File `utils.py` сontains necessary functions from the original MWIS-Benchmark.
 
@@ -82,7 +82,7 @@ The basic example (with defaults settings) run this methods over the local maxim
   ```python solve_torus_dataset.py solve kamis  data/input/kamis  data/output/kamis --time_limit 100 --results_filename example_results.json```
 
 - Intel-TreeSearch
-  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights solvers/intel_treesearch/NPHard/model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
+  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/dgl-final-model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
 
 - Learning What to Differ
   ```python solve_torus_dataset.py --self_loops solve lwd data/input/lwd  data/output/lwd --time_limit 100 --pretrained_weights pretrained_models/lwd-final-model --maximum_iterations_per_episode 100 --results_filename example_results.json```
