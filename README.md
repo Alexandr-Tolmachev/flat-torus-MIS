@@ -52,12 +52,12 @@ The folder `torus_graph_utils` contains several scripts for constructing graphs 
 
 `solve_torus_dataset.py` script is **the key tool for running experiments**. The json file `dataset_params.json` contains the parameters of datasets that precisely described and considered in the our paper.
 
-The folder `data` contains the experiment results (json files, MIS images on the torus that used in [our paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9).
+The archieve `data.zip` contains the folder `data` contains the experiment results (json files, MIS images on the torus that used in [our paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9).
 
 
 ## Installation
 
-Firstly, you must install `conda` and clone this repository and unzip `pretrained_models.zip` archive to `pretrained_models` folder. Next, you can run `setup_bm_env.sh` script or run two commands manually:
+Firstly, you must install `conda` and clone this repository, unzip `pretrained_models.zip` archive to `pretrained_models` folder and unzip `data.zip` to `data` folder inside this repository. Next, you can run `setup_bm_env.sh` script or run two commands manually:
 - `conda env create -f environment.yml` (create the environment via `environment.yml` file from this repository)
 -  `conda activate mwis-benchmark` (activate the created environment)
 
@@ -66,6 +66,7 @@ Firstly, you must install `conda` and clone this repository and unzip `pretraine
 git clone https://github.com/Alexandr-Tolmachev/flat-torus-MIS.git
 cd flat-torus-MIS
 unzip pretrained_models.zip
+unzip data.zip
 ./setup_bm_env.sh
 ```
 
