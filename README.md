@@ -62,8 +62,8 @@ The archieve `data.zip` contains the folder `data` contains our the experiment r
   ├── solvers
   ├── scripts
   ├── torus_graph_utils
-  ├── *pretrained_models*
-  ├── *data*
+  ├── pretrained_models
+  ├── data
   ├── solve_torus_dataset.py
   ...
 ```
