@@ -31,7 +31,7 @@ For the benchmarking the MIS finding, the open-source benchmark suite [MWIS-Benc
     - [Running on pre-defined datasets](#running-on-pre-defined-datasets)
     - [Running on the flat torus with different scales](#running-on-the-flat-torus-with-different-scales)
     - [MIS solvers comparison](#mis-solvers-comparison)
-    - [Images of MIS on the flat toruses](#images-of-mis-on-the-flat-toruses)
+    - [Creating images of MIS on the flat toruses](#creating-images-of-mis-on-the-flat-toruses)
     - [Image creation for graphs with local optimum parameters](#image-creation-for-graphs-with-local-optimum-parameters)
 - [Citation](#citation)
 
@@ -154,7 +154,7 @@ For example, to compare the results over `dataset-1` this command has been run:
 
 The folder `data/methods_comparision` contains of the csv-files corresponded to datasets considered in the paper.
 
-### Images of MIS on the flat toruses
+### Creating images of MIS on the flat toruses
 
 The script `create_images.py` from `scripts` folder helps to create images of MIS size on the flat torus via the json-file with results. The argument `--path_to_json` corresponds to the json file with results (including found MIS set), the argument `--image_folder` be the path where the created image will be saved. The optional argument `--point_size` corresponded to the size of each point from MIS and selected empirically. Each image saves in the format `{graph_name}_{N}_{M}_{MIS set size}.png`.
 
