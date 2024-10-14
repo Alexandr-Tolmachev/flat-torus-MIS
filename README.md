@@ -22,6 +22,7 @@ For the benchmarking the MIS finding, the open-source benchmark suite [MWIS-Benc
 - [Introduction](#introduction)
 - [Contents](#contents)
 - [Repository Contents](#repository-contents)
+  - [Data and models](#data-and-models)
 - [Installation](#installation)
   - [Install From The Source](#install-from-the-source)
 - [Experiments](#experiments)
@@ -44,22 +45,37 @@ In `solvers`, you can find the wrappers for the currently supported solvers. In 
 
 For using this suite, `conda` is required. You can the `setup_bm_env.sh` script which will setup the conda environment with all required dependencies. The file `main.py` is the main interface you will call for data generation, solving, and training from the [MIS-benchmark](https://github.com/MaxiBoether/mis-benchmark-framework/blob/master/main.py) that we used. You can find out more about the usage using `python main.py -h`. 
 
-The archive `pretrained_models.zip` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). Before you starting experiments, you should unzip extract these files to the `pretrained_models` folder.
-
 File `utils.py` сontains necessary functions from the original MWIS-Benchmark.
 
 The folder `torus_graph_utils` contains several scripts for constructing graphs based on the flat toruses and for the creation of datasets with graphs parameters that will be used in our experiments.
 
 `solve_torus_dataset.py` script is **the key tool for running experiments**. The json file `dataset_params.json` contains the parameters of datasets that precisely described and considered in the our paper.
 
-The archieve `data.zip` contains the folder `data` contains the experiment results (json files, MIS images on the torus that used in [our paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9).
+### Data and models
+
+The archive `pretrained_models.zip` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). Before you starting experiments, you should unzip extract these files to the `pretrained_models` folder. Additionally, the Intel tree search model that was trained by Li et al. can be downloaded from [the original repository](https://github.com/isl-org/NPHard/tree/master/model).
+
+The archieve `data.zip` contains the folder `data` contains our the experiment results (json files, MIS images on the torus that was obtained and described in [our paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9). You should download this archieve to the root of the current repository.
+
+```
+├── flat-torus-MIS
+  ├── solvers
+  ├── scripts
+  ├── torus_graph_utils
+  ├── *pretrained_models*
+  ├── *data*
+  ├── solve_torus_dataset.py
+  ...
+```
+
+You can download these zip-archievs from this [link](https://disk.yandex.ru/d/Es4ungd-cE0SZw). 
 
 
 ## Installation
 
 Firstly, you must install `conda` and clone this repository, unzip `pretrained_models.zip` archive to `pretrained_models` folder and unzip `data.zip` to `data` folder inside this repository. 
 
-These archieves (`data.zip` and `pretrained_models.zip`) can be downloaded via this link (will be written here later).
+These archieves (`data.zip` and `pretrained_models.zip`) can be downloaded via this [link](https://disk.yandex.ru/d/Es4ungd-cE0SZw) and extracted to the `data` and `pretrained_models` folders in this repository.
 
 Next, you can run `setup_bm_env.sh` script or run two commands manually:
 - `conda env create -f environment.yml` (create the environment via `environment.yml` file from this repository)
@@ -88,10 +104,12 @@ The basic example (with defaults settings) run this methods over the local maxim
   ```python solve_torus_dataset.py solve kamis  data/input/kamis  data/output/kamis --time_limit 100 --results_filename example_results.json```
 
 - Intel-TreeSearch
-  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights pretrained_models/intel-final-model/model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
+  ```python solve_torus_dataset.py --self_loops solve intel-treesearch  data/input/intel  data/output/intel --time_limit 100 --pretrained_weights solvers/intel_treesearch/NPHard/model --reduction --local_search  --num_threads 1 --results_filename example_results.json```
 
 - Learning What to Differ
   ```python solve_torus_dataset.py --self_loops solve lwd data/input/lwd  data/output/lwd --time_limit 100 --pretrained_weights pretrained_models/lwd-final-model --maximum_iterations_per_episode 100 --results_filename example_results.json```
+
+*Notice:* for Intel-TreeSearch you can use other model `pretrained_models/intel-final-model/model` 9from MWIS-Benchmark), but in our experiments the model pretrained by [Li et.al.(2019)](https://proceedings.neurips.cc/paper/2018/file/8d3bba7425e7c98c50f52ca1b52d3735-Paper.pdf) was used (pretrained model weights are located here: *solvers/intel_treesearch/NPHard/model*).
 
 How to run experiments over graph datasets we will described in the next section.
 
