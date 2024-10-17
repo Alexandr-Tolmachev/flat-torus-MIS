@@ -92,7 +92,7 @@ unzip data.zip
 
 ## Experiments
 
-We will use the `solve_torus_dataset.py` script to run experiments. The argument `--result_filename` corresponds to the name of file with experiments results. For usage-friendliness notice that **this argument shouldn't be equal  to `results.json`** because this may result in overwriting your results from previous experiments.
+We will use the `solve_torus_dataset.py` script to run experiments. The argument `--result_filename` corresponds to the name of file with experiments results. For usage-friendliness notice that **this argument shouldn't be equal  to "results.json"** because this may result in overwriting your results from previous experiments.
 
 ### Inference for various methods
 The basic example (with defaults settings) run this methods over the local maximum graph $T_{l_1, l_2, \alpha}$ found in our paper ($l_1 = l_2 = 3.331, \alpha = 60^\circ$) with grid size $N = M = 100$ (basic grid size for our experiments).
@@ -142,7 +142,7 @@ To compare MIS solvers on some dataset you firstly should run experiments over t
     ├── results_filename
 ```
 
-After it you should run the `compare_methods.py` script from the `scripts` folder via following command to save the csv-file with same name as results_filename in the `path_to_comparison_file` directory:
+After it you should run the `compare_methods.py` script from the `scripts` folder via following command to save the csv-file with same name as results_filename in the file named `path_to_comparison_file` :
 
 ```python scripts/compare_methods.py --output_folder path_to_output_folder --result_filename results_filename --comparison_folder path_to_comparison_file```
 
