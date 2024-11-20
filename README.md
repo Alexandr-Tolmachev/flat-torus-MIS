@@ -1,5 +1,4 @@
-<div align="center"><h1>&nbsp;Density estimation of planar sets without unit
-distances via periodic colorings exploration</h1></div>
+<div align="center"><h1>&nbsp;On lower bounds of the density of planar periodic sets without unit distances</h1></div>
 
 <p align="center">
 | <a href="https://www.overleaf.com/read/vwccvrvmxbck#01f7d9"><b>Paper</b></a> |
@@ -179,7 +178,7 @@ For other methods (DGL-TreeSearch, Intel-TreeSearch, LwD) this procedure are ana
 ## Citation
 ```bibtex
 @misc{flat_torus_MIS2024,
-      title={Density estimation of planar sets without unit distances via periodic colorings exploration}, 
+      title={On lower bounds of the density of planar periodic sets without unit distances}, 
       author={Alexander Tolmachev},
       year={2024},
       eprint={appears later :) },
