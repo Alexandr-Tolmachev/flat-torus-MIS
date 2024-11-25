@@ -1,14 +1,14 @@
-<div align="center"><h1>&nbsp;On lower bounds of the density of planar periodic sets without unit distances</h1></div>
+<div align="center"><h1>&nbsp;Package for the MIS finding on flat torus based graphs</h1></div>
 
 <p align="center">
-| <a href="https://www.overleaf.com/read/vwccvrvmxbck#01f7d9"><b>Paper</b></a> |
+|based on <a href="https://arxiv.org/abs/2411.13248"><b>Paper</b></a> |
 
 
 ---
 
 ## Introduction 
 We study a periodic planar colorings as the completely new view on the estimation of this density and empirically
-confirmed current lower bound over periodic colorings. This repository based on the [paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9) that proposed to estimate the density of planar sets without unit distances via the finding the Maximum Independent Sets (MIS) of some graphs constructed on the flat torus $T_{l_1, l_2, \alpha}$ parametrized lengths of torus sides $l_1, l_2$ and the angle $\alpha \in (0, \pi/2]$ between them.
+confirmed current lower bound over periodic colorings. This repository based on the [paper](https://arxiv.org/abs/2411.13248) that proposed to estimate the density of planar sets without unit distances via the finding the Maximum Independent Sets (MIS) of some graphs constructed on the flat torus $T_{l_1, l_2, \alpha}$ parametrized lengths of torus sides $l_1, l_2$ and the angle $\alpha \in (0, \pi/2]$ between them.
 
 For the benchmarking the MIS finding, the open-source benchmark suite [MWIS-Benchmark](https://github.com/MaxiBoether/mis-benchmark-framework) for the NP-hard Maximum Independent Set have been applied and integrated to the pipeline of experiments described in the our paper. Four maximum independent set solvers from this benchmark have been considered: 
 
@@ -54,7 +54,7 @@ The folder `torus_graph_utils` contains several scripts for constructing graphs 
 
 The archive `pretrained_models.zip` consists of the weights of pretrained models used in the original benchmark during their experiments ([paper](https://openreview.net/pdf?id=mk0HzdqY7i1), ICLR-2022). Before you starting experiments, you should unzip extract these files to the `pretrained_models` folder. Additionally, the Intel tree search model that was trained by Li et al. can be downloaded from [the original repository](https://github.com/isl-org/NPHard/tree/master/model).
 
-The archieve `data.zip` contains the folder `data` contains our the experiment results (json files, MIS images on the torus that was obtained and described in [our paper](https://www.overleaf.com/read/vwccvrvmxbck#01f7d9). You should download this archieve to the root of the current repository.
+The archieve `data.zip` contains the folder `data` contains our the experiment results (json files, MIS images on the torus that was obtained and described in [our paper](https://arxiv.org/abs/2411.13248). You should download this archieve to the root of the current repository.
 
 ```
 ├── flat-torus-MIS
@@ -181,8 +181,9 @@ For other methods (DGL-TreeSearch, Intel-TreeSearch, LwD) this procedure are ana
       title={On lower bounds of the density of planar periodic sets without unit distances}, 
       author={Alexander Tolmachev},
       year={2024},
-      eprint={appears later :) },
+      eprint={2411.13248},
       archivePrefix={arXiv},
-      primaryClass={math.MG}
+      primaryClass={math.MG},
+      url={https://arxiv.org/abs/2411.13248}
 }
 ```
